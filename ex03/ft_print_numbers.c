@@ -17,11 +17,11 @@ void	ft_print_numbers(void)
 	int		n;
 	char	c;
 
-	n = 49;
+	n = 48;
 	while (n < 58)
 	{
 		c = n;
 		write(1, &c, 1);
-		n += 1;
+		n++;
 	}
 }
