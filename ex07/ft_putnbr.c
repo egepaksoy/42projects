@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:52:32 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/05 01:17:44 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/06 19:43:19 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
 	}
-	else if (nb < 9)
+	else
 	{
 		ft_putchar(nb + 48);
 	}
