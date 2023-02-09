@@ -6,11 +6,11 @@
 /*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 17:00:33 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/07 17:00:34 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/09 19:38:16 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_uppercase(char *str)
+int	ft_str_is_printable(char *str)
 {
 	int	n;
 
