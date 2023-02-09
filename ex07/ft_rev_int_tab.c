@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 15:17:15 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/06 19:39:02 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/09 15:31:41 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@ void	ft_rev_int_tab(int *tab, int size)
 	int		s;
 	int		f;
 	int		n;
-	char	c;
 
 	s = 0;
 	f = size - 1;
