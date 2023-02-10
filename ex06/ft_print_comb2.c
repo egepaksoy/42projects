@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 16:52:19 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/05 01:19:40 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/10 15:19:41 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,12 @@ void	ft_print_comb2(void)
 	int	i4;
 
 	i1 = 0;
+	i2 = 0;
+	i3 = 0;
+	i4 = 0;
 	ft_loop(i1, i2, i3, i4);
+}
+int main() 
+{
+    ft_print_comb2();
 }
