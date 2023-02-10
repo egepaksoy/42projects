@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:56:29 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/09 10:34:28 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/10 20:37:36 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char	*ft_strcapitalize(char *str)
 	int	n;
 
 	n = 0;
+	if (str[n] == '\0')
+		return (str);
 	str[n] = makeup(str[n]);
 	n++;
 	while (str[n] != '\0')
