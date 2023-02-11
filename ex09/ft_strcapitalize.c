@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:56:29 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/11 13:27:23 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/11 16:59:02 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_strcapitalize(char *str)
 		str[n] = makelow(str[n]);
 		n++;
 	}
-	n = 1;
+	n = 0;
 	while (str[n] != '\0')
 	{
 		if (!((str[n] >= 'a' && str[n] <= 'z')
