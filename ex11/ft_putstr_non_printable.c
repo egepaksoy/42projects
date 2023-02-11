@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 10:16:01 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/11 10:27:45 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/11 11:54:49 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ int	ft_char_is_printable(char c)
 void	ft_putstr_non_printable(char *str)
 {
 	int		i;
-	char	arr[17];
 
 	i = 0;
 	while (str[i] != '\0')
