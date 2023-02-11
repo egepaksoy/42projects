@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 15:56:29 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/10 20:37:36 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/11 09:50:31 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,15 @@ char	*ft_strcapitalize(char *str)
 		str[n] = makelow(str[n]);
 		n++;
 	}
-	n = 0;
+	n = 1;
 	while (str[n] != '\0')
 	{
-		if ((
-				(str[n] >= 32 && str[n] <= 47)
-				|| (str[n] >= 58 && str[n] <= 64)
-				|| (str[n] >= 91 && str[n] <= 96)
-				|| (str[n] >= 123 && str[n] <= 126))
-			&& str[n + 1] != '\0')
+		if (!(str[n] >= 'a' && str[n] <= 'z') 
+			&& (str[n + 1] >= 'a' && str[n + 1] <= 'z'))
+		{
 			str[n + 1] = makeup(str[n + 1]);
+			n++;
+		}
 		n++;
 	}
 	return (str);
