@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 10:16:01 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/11 11:54:49 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/12 13:46:18 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,22 @@ int	ft_char_is_printable(char c)
 
 void	ft_putstr_non_printable(char *str)
 {
-	int		i;
+	int	i;
+	int	o;
 
 	i = 0;
-	while (str[i] != '\0')
+	o = 1;
+	while (o)
 	{
 		if (ft_char_is_printable(str[i]) == 1)
+		{
 			ft_putchar(str[i]);
-		else
+			i++;
+			continue ;
+		}
+		if (!str[i] && !str[i + 1])
+			o = 0;
+		if (o)
 		{
 			ft_putchar('\\');
 			ft_putchar("0123456789abcdef"[str[i] / 16]);
