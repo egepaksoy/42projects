@@ -12,9 +12,6 @@
 
 char	makeup(char c)
 {
-	int	n;
-
-	n = 0;
 	if (97 <= c && c <= 122)
 	{
 		c -= 32;
@@ -24,9 +21,6 @@ char	makeup(char c)
 
 char	makelow(char c)
 {
-	int	n;
-
-	n = 0;
 	if (65 <= c && c <= 90)
 	{
 		c += 32;
