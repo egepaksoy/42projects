@@ -3,35 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:38:14 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/12 15:08:07 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/14 05:37:25 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-    int n = 0;
-    int res = 0;
-    int t = 1;
-    
-    while(str[n])
-    {
-        if (str[n] >= 48 && str[n] <= 57)
-        {
-            res *= 10;
-            res += str[n] - 48;
-        }
-        if (str[n] == 45)
-        {
-            t *= -1;
-        }
-        if ((str[n] >= 65 && str[n] <= 90) || (str[n] >= 97 && str[n] <= 122))
-        {
-            return (res * t);
-        }
-        n++;
-    }
-    return (res * t);
+	int	n;
+	int	res;
+	int	t;
+
+	n = 0;
+	res = 0;
+	t = 1;
+	while (str[n])
+	{
+		if (str[n] >= 48 && str[n] <= 57)
+		{
+			res *= 10;
+			res += str[n] - 48;
+		}
+		if (str[n] == 45)
+		{
+			t *= -1;
+		}
+		if ((str[n] >= 65 && str[n] <= 90) || (str[n] >= 97 && str[n] <= 122))
+		{
+			return (res * t);
+		}
+		n++;
+	}
+	return (res * t);
 }

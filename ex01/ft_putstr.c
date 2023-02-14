@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:34:52 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/12 14:36:08 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/14 05:36:09 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-    int n;
-    
-    n = 0;
-    while(str[n])
-    {
-        write(1, &str[n], 1);
-        n++;
-    }
+	int	n;
+
+	n = 0;
+	while (str[n])
+	{
+		write(1, &str[n], 1);
+		n++;
+	}
 }

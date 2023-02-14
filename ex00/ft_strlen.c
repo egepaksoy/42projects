@@ -3,22 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 14:33:56 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/12 14:34:24 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/14 05:35:40 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int sz;
+	int	sz;
 
-    sz = 0;
-    while(str[sz])
-    {
-        sz++;
-    }
-
-    return (sz);
+	sz = 0;
+	while (str[sz])
+	{
+		sz++;
+	}
+	return (sz);
 }

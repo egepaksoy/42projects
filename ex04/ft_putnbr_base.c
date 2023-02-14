@@ -3,94 +3,77 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 15:08:27 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/12 17:04:35 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/14 06:08:42 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include <unistd.h>
+#include <unistd.h>
 
- void ft_putchar(char c)
- {
-     write(1, &c, 1);
- }
+int	ft_strlen(char *str)
+{
+	int	sz;
 
- char    *ft_strlowcase(char *str)
- {
-     int    a;
+	sz = 0;
+	while (str[sz])
+	{
+		sz++;
+	}
+	return (sz);
+}
 
-     a = 0;
-     while (str[a] != '\0')
-     {
-         if (65 <= str[a] && str[a] <= 90)
-             str[a] += 32;
-         a++;
-     }
-     return (str);
- }
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
- int ft_strlen(char *str)
- {
-     int sz;
+int	check(char *base)
+{
+	int	n;
+	int	i;
 
-     sz = 0;
-     while(str[sz])
-     {
-         sz++;
-     }
-     return sz;
- }
+	n = 0;
+	while (base[n + 1])
+	{
+		if (base[n] <= 32 || base[n] == 127 || base[n] == 43 || base[n] == 45)
+			return (0);
+		i = n + 1;
+		while (base[i])
+		{
+			if (base[i] == base[n])
+				return (0);
+			i++;
+		}
+		n++;
+	}
+	if (!n)
+		return (0);
+	return (1);
+}
 
- int    ft_strcmp(char *s1, char *s2)
- {
-     int    n;
+void	ft_putnbr_base(int nbr, char *base)
+{
+	int	b;
 
-     n = 0;
-     while (s1[n] == s2[n] && (s1[n] || s2[n]))
-     {
-         n++;
-     }
-     return (s1[n] - s2[n]);
- }
-
- int check(char *base)
- {
-     int n;
-     char arr[4][17] = {"0123456789", "01", "0123456789abcdef", "poneyvif"};
-
-     n = 0;
-     while(n<4)
-     {
-         if (ft_strcmp(base, arr[n]) == 0)
-         {
-             return 1;
-         }
-         n++;
-     }
-     return 0;
- }
-
- void ft_putnbr_base(int nbr, char *base)
- {
-     base = ft_strlowcase(base);
-     int b = ft_strlen(base);
-     if (check(base))
-     {
-         if (nbr < 0)
-         {
-            ft_putchar('-');
-            nbr *= -1;
-         }
-         if (nbr >= b)
-         {
-             ft_putnbr_base(nbr / b, base);
-             ft_putchar(base[nbr % b]);
-         }
-         else
-         {
-            ft_putchar(base[nbr]);
-         }
-     }
- }
+	if (!check(base))
+	{
+		return (0);
+	}
+	b = ft_strlen(base);
+	if (nbr < 0)
+	{
+		ft_putchar('-');
+		nbr *= -1;
+	}
+	if (nbr >= b)
+	{
+		ft_putnbr_base(nbr / b, base);
+		ft_putchar(base[nbr % b]);
+	}
+	else
+	{
+		ft_putchar(base[nbr]);
+	}
+}
