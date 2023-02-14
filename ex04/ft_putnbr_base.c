@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 15:08:27 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/14 06:08:42 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/14 06:26:28 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,23 +57,22 @@ void	ft_putnbr_base(int nbr, char *base)
 {
 	int	b;
 
-	if (!check(base))
+	if (check(base))
 	{
-		return (0);
-	}
-	b = ft_strlen(base);
-	if (nbr < 0)
-	{
-		ft_putchar('-');
-		nbr *= -1;
-	}
-	if (nbr >= b)
-	{
-		ft_putnbr_base(nbr / b, base);
-		ft_putchar(base[nbr % b]);
-	}
-	else
-	{
-		ft_putchar(base[nbr]);
+		b = ft_strlen(base);
+		if (nbr < 0)
+		{
+			ft_putchar('-');
+			nbr *= -1;
+		}
+		if (nbr >= b)
+		{
+			ft_putnbr_base(nbr / b, base);
+			ft_putchar(base[nbr % b]);
+		}
+		else
+		{
+			ft_putchar(base[nbr]);
+		}
 	}
 }
