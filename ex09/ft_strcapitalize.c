@@ -48,7 +48,7 @@ char	*ft_strcapitalize(char *str)
 		str[n] = makelow(str[n]);
 		n++;
 	}
-	n = 0;
+	n = 1;
 	while (str[n] != '\0')
 	{
 		if (!((str[n] >= 'a' && str[n] <= 'z')
