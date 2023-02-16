@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 15:08:27 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/14 06:26:28 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/16 01:07:19 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	check(char *base)
 	int	i;
 
 	n = 0;
-	while (base[n + 1])
+	while (base[n])
 	{
 		if (base[n] <= 32 || base[n] == 127 || base[n] == 43 || base[n] == 45)
 			return (0);
@@ -48,7 +48,7 @@ int	check(char *base)
 		}
 		n++;
 	}
-	if (!n)
+	if (n < 2)
 		return (0);
 	return (1);
 }
@@ -63,9 +63,9 @@ void	ft_putnbr_base(int nbr, char *base)
 		if (nbr < 0)
 		{
 			ft_putchar('-');
-			nbr *= -1;
+			ft_putnbr_base(nbr * -1, base);
 		}
-		if (nbr >= b)
+		else if (nbr >= b)
 		{
 			ft_putnbr_base(nbr / b, base);
 			ft_putchar(base[nbr % b]);
