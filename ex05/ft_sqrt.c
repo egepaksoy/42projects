@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 04:31:40 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/18 04:54:47 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/18 05:23:55 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_sqrt(int nb)
+int	ft_sqrt(int nb)
 {
-    int n;
+	int	n;
 
-    n = 1;
-    while (n <= nb/n || nb == 1)
-    {
-        if (nb == n*n)
-            return (n);
-        n++;
-    }
-    return (0);
+	n = 1;
+	while (n <= (nb / n) || nb == 1)
+	{
+		if (nb == n * n)
+			return (n);
+		n++;
+	}
+	return (0);
 }
