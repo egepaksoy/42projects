@@ -23,20 +23,6 @@ void	ft_print(char *c)
 	write(1, "\n", 1);
 }
 
-int	check(int i, int *arr, int ac)
-{
-	int	n;
-
-	n = 0;
-	while (n < ac)
-	{
-		if (arr[n] == i)
-			return (0);
-		n++;
-	}
-	return (1);
-}
-
 void	swap(char **av, int i)
 {
 	char	*max;
