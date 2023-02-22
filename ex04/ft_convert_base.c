@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 01:43:57 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/22 01:59:46 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/22 10:23:06 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,33 +33,18 @@ char ft_len(char *str)
     return (n);
 }
 
-char converter(char *nbr, char *base, char *to)
+char *ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
-    int n = 0;
+    int base_len = ft_len(base_from);
+    int to_len = ft_len(base_to);
+    int tmp;
     char *res;
-    int to_len = ft_len(to);
-    int base_len = ft_len(base);
-    int i = 0;
-    int t = 1;
+    int n;
 
-    while(nbr[n] == 32)
-    {
-        n++;
-    }
-    while(nbr[n] == 45 || nbr[n] == 43)
-    {
-        t *= (44 - nbr[n]);
-        n++;
-    }
-    
-    while(nbr[n] < 58 && nbr[n] > 47)
+    n = 0;
+    while (nbr[n])
     {
         
     }
-    return (res);
-}
-
-char *ft_convert_base(char *nbr, char *base_from, char *base_to)
-{
 
 }
