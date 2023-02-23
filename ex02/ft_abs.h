@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
+/*   By: epaksoy <epaksoy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 08:18:21 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/23 08:21:13 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/23 12:33:37 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-#define ABS(x) ((x) < 0 ? -(x) : (x))
+# define ABS(x) (x) < 0 ? - (x) : (x)
 
 #endif
