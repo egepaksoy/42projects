@@ -6,69 +6,68 @@
 /*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:42:25 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/21 18:42:26 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/26 08:22:52 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-unsigned int how_long(char **sarp, char *spr, int size)
+int full_len(int size, char **strs, char *sep)
 {
-    int n = 0;
-    int i = 0;
-    int ret;
-    
-    while (spr[n])
+    int n;
+    int i;
+    int t;
+
+    i = 0;
+    while (i < size)
     {
-        n++;
-    }
-    ret = n*(size-1);
-    n = 0;
-    while(size > n)
-    {
-        i = 0;
-        while(sarp[n][i])
+        n = 0;
+        while (strs[i][n])
         {
-            i++;
+            n++;
+            t++;
         }
-        ret += i;
-        n++;
+        i++;
     }
-    
-    return (ret+1);
+    i = 0;
+    while (sep[i])
+    {
+        i++;
+    }
+    t += i * (size - 1);
+    return (t);
 }
 
 char *ft_strjoin(int size, char **strs, char *sep)
 {
-    char *ret;
+    char *s;
+    int n;
+    int e;
+    int i;
     int a;
-    int n = 0;
-    int i = 0;
-    int s = 0;
-    
-    if (!size)
-        return ((char *)malloc(sizeof(char)));
-    
-    a = how_long(strs,sep,size);
-    ret = (char *)malloc(sizeof(char)*a);
-    while (s < size)
+
+    e = full_len(size, strs, sep);
+    s = (char *) malloc(e + 1);
+    n = 0;
+    a = 0;
+    while (a < size)
     {
         i = 0;
-        while(strs[s][i])
+        while (strs[a][i])
         {
-            ret[n] = strs[s][i];
+            s[n] = strs[a][i];
             n++;
             i++;
         }
-        s++;
-        i=0;
-        while(sep[i] && s < size)
+        a++;
+        i = 0;
+        while (a < size && sep[i])
         {
-            ret[n] = sep[i];
-            n++;
+            s[n] = sep[i];
             i++;
+            n++;
         }
     }
-    ret[a-1] = '\0';
-    return (ret);
+    s[n] = '\0';
+    return (s);
 }
