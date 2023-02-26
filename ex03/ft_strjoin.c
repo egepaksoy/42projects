@@ -19,6 +19,7 @@ int full_len(int size, char **strs, char *sep)
     int t;
 
     i = 0;
+    t = 0;
     while (i < size)
     {
         n = 0;
