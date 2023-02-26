@@ -6,7 +6,7 @@
 /*   By: epaksoy <epaksoy@student.42kocaeli.com.tr  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:42:25 by epaksoy           #+#    #+#             */
-/*   Updated: 2023/02/26 08:22:52 by epaksoy          ###   ########.fr       */
+/*   Updated: 2023/02/26 08:42:35 by epaksoy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,17 @@ char *ft_strjoin(int size, char **strs, char *sep)
     {
         i = 0;
         while (strs[a][i])
-        {
-            s[n] = strs[a][i];
-            n++;
-            i++;
-        }
+            s[n++] = strs[a][i++];
         a++;
         i = 0;
         while (a < size && sep[i])
-        {
-            s[n] = sep[i];
-            i++;
-            n++;
-        }
+            s[n++] = sep[i++];
     }
     s[n] = '\0';
     return (s);
+}
+#include <stdio.h>
+int main(int ac, char **av)
+{
+    printf("%s", ft_strjoin(ac, av, " , "));
 }
